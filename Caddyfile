@@ -1,8 +1,10 @@
+# Caddyfile
 {
-	frankenphp
+    frankenphp
 }
 
-:8080 {
-	root * /app/public
-	php_server
+# Listen on the port provided by Railway (or default to 80)
+:{$PORT:80} {
+    root * /app/public
+    php_server
 }
